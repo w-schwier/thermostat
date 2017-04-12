@@ -76,7 +76,7 @@ describe('Thermostat', function() {
 
   describe('current energy usage', function(){
     it('returns low-usage if temp < 18', function(){
-      thermostat.decrease(5);
+      thermostat.temp = 16;
       expect(thermostat.currentEnergyUsage()).toBe("low-usage");
     });
 
@@ -86,7 +86,7 @@ describe('Thermostat', function() {
 
     it('returns high-usage if temp > 25', function(){
       thermostat.powerSavingMode = false;
-      thermostat.increase(8);
+      thermostat.temp = 27;
       expect(thermostat.currentEnergyUsage()).toBe("high-usage");
     });
   });
