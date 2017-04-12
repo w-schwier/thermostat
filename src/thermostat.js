@@ -13,7 +13,7 @@ Thermostat.prototype.getCurrentTemperature = function () {
 };
 
 Thermostat.prototype.increase = function() {
-  if(this.isMaximumTemperature){
+  if(this.isMaximumTemperature()){
     return;
   }
   this.temp += 1;
