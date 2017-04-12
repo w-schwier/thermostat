@@ -29,3 +29,15 @@ Thermostat.prototype.decrease = function(degrees) {
     this.temp -= degrees;
   };
 };
+
+Thermostat.prototype.powerSavingModeOff = function () {
+  this.powerSavingMode = false
+};
+
+Thermostat.prototype.powerSavingModeOn = function () {
+  this.powerSavingMode = true
+};
+
+Thermostat.prototype.reset = function () {
+  this.temp = 20;
+};

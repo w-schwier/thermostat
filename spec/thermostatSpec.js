@@ -44,11 +44,29 @@ describe('Thermostat', function() {
       thermostat.increase(30)
       expect(thermostat.temp).toEqual(25)
     });
+
     it('Sets max temp to 32 degrees when PSM is off', function() {
       thermostat.powerSavingMode = false
       thermostat.increase(100)
       expect(thermostat.temp).toEqual(32)
     });
+
+    it('can be switched off', function(){
+      thermostat.powerSavingModeOff();
+      expect(thermostat.powerSavingMode).toBe(false);
+    });
+
+    it('can be switched on', function(){
+      thermostat.powerSavingMode = false;
+      thermostat.powerSavingModeOn();
+      expect(thermostat.powerSavingMode).toBe(true);
+    });
   });
 
+  describe('temperature reset', function(){
+    it('resets to default of 20 degrees', function(){
+      thermostat.reset();
+      expect(thermostat.temp).toEqual(20);
+    });
+  });
 });
