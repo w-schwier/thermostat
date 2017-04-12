@@ -73,4 +73,21 @@ describe('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(20);
     });
   });
+
+  describe('current energy usage', function(){
+    it('returns low-usage if temp < 18', function(){
+      thermostat.decrease(5);
+      expect(thermostat.currentEnergyUsage()).toBe("low-usage");
+    });
+
+    it('returns medium-usage if temp < 25', function(){
+      expect(thermostat.currentEnergyUsage()).toBe("medium-usage");
+    });
+
+    it('returns high-usage if temp > 25', function(){
+      thermostat.powerSavingMode = false;
+      thermostat.increase(8);
+      expect(thermostat.currentEnergyUsage()).toBe("high-usage");
+    });
+  });
 });
