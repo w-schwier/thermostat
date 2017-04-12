@@ -8,31 +8,33 @@ describe('Thermostat', function() {
   });
 
   it('has starting temp of 20 degrees', function() {
-    expect(thermostat.temp).toEqual(20);
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 
   describe('temperature changes', function(){
 
     it('increase temperature', function() {
-      thermostat.increase(4);
-      expect(thermostat.temp).toEqual(24);
+      thermostat.increase();
+      expect(thermostat.getCurrentTemperature()).toEqual(21);
     });
 
     it('decreases temprature', function() {
-      thermostat.decrease(4);
-      expect(thermostat.temp).toEqual(16);
+      thermostat.decrease();
+      expect(thermostat.getCurrentTemperature()).toEqual(19);
     });
 
     it('temperature cannot be set below 10 degrees', function() {
-      thermostat.decrease(11);
-      expect(thermostat.temp).toEqual(10);
+      thermostat.temp = 10;
+      thermostat.decrease();
+      expect(thermostat.getCurrentTemperature()).toEqual(10);
     });
 
-    it('throws a message if target temperature is below 10 degrees', function(){
-      console.log = jasmine.createSpy("log")
-      thermostat.decrease(11);
-      expect(console.log).toHaveBeenCalledWith('Temperature has been set to the minimum of 10 degrees');
-    });
+    // it('throws a message if target temperature is below 10 degrees', function(){
+    //   console.log = jasmine.createSpy("log")
+    //   thermostat.temp = 10;
+    //   thermostat.decrease();
+    //   expect(console.log).toHaveBeenCalledWith('Temperature has been set to the minimum of 10 degrees');
+    // });
   });
 
   describe('powerSavingMode', function() {
@@ -41,14 +43,16 @@ describe('Thermostat', function() {
     });
 
     it('Sets max temp to 25 degrees when PSM is on', function() {
-      thermostat.increase(30)
-      expect(thermostat.temp).toEqual(25)
+      thermostat.temp = 25;
+      thermostat.increase();
+      expect(thermostat.getCurrentTemperature()).toEqual(25)
     });
 
     it('Sets max temp to 32 degrees when PSM is off', function() {
       thermostat.powerSavingMode = false
-      thermostat.increase(100)
-      expect(thermostat.temp).toEqual(32)
+      thermostat.temp = 32;
+      thermostat.increase();
+      expect(thermostat.getCurrentTemperature()).toEqual(32)
     });
 
     it('can be switched off', function(){
@@ -66,7 +70,7 @@ describe('Thermostat', function() {
   describe('temperature reset', function(){
     it('resets to default of 20 degrees', function(){
       thermostat.reset();
-      expect(thermostat.temp).toEqual(20);
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
     });
   });
 });
