@@ -35,4 +35,20 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('powerSavingMode', function() {
+    it('PSM is on by default', function () {
+      expect(thermostat.powerSavingMode).toBe(true);
+    });
+
+    it('Sets max temp to 25 degrees when PSM is on', function() {
+      thermostat.increase(30)
+      expect(thermostat.temp).toEqual(25)
+    });
+    it('Sets max temp to 32 degrees when PSM is off', function() {
+      thermostat.powerSavingMode = false
+      thermostat.increase(100)
+      expect(thermostat.temp).toEqual(32)
+    });
+  });
+
 });
