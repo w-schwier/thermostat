@@ -2,22 +2,26 @@
 <html>
   <head>
     <title> Darmuus </title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Cinzel+Decorative|Khmer|Mr+Bedfort" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='public/main.css'>
   </head>
 
   <center>
     <body>
-      <section>
+      <section class='thermostat'>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
           <p>
             <h1 id="darmuus"> Darmuus </h1>
-            <h3 id="temperature"></h3>
+            <div class="panel">
+            <h3><span id="temperature"></span>&deg;C</h3>
+            Power Saving Mode is <span id='power-saving-mode'>on</span>
+            </div>
             <button id='temperature-increase'>+</button>
             <button id='temperature-decrease'>-</button>
             <button id='temperature-reset'>Reset</button>
             <button id='powersaving-on'>PSM on</button>
             <button id='powersaving-off'>PSM off</button>
-            Power Saving Mode is <span id='power-saving-mode'>on</span>
+
             <script src="src/thermostat.js"></script>
             <script src="interface.js"></script>
           </p>

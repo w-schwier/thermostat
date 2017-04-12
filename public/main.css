@@ -9,3 +9,49 @@
 .high-usage {
     color: red;
 }
+
+#darmuus {
+font-family: 'Mr Bedfort', cursive;
+font-size: 100px;
+padding: 1px;
+margin: 1px;
+}
+
+body {
+  margin-left: 600px;
+  margin-right: 600px;
+  background-image: url("warm-fire.jpg");
+ /*-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;*/
+ background-size: cover;
+}
+
+section.thermostat {
+  border: solid;
+  background:
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+
+#temperature {
+  padding: 1px;
+  margin: 1px;
+  font-size: 70px
+}
+
+.panel {
+  float: left;
+  border: solid;
+
+
+}
+
+@font-face {
+  font-family: customFontBitches;
+  src: url(SCRIPALT.ttf)
+}
