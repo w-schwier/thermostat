@@ -34,6 +34,7 @@ $(document).ready(function() {
   function updateTemperature() {
     $('#temperature').text(thermostat.temp);
     $('#temperature').attr('class', thermostat.currentEnergyUsage());
+    $('#screen').attr('class', thermostat.getPSM());
   };
 
   function displayWeather(place) {

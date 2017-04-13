@@ -19,6 +19,24 @@ h3 {
     color: red;
 }
 
+.on {
+  border: 1px solid;
+  width: 250px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #d6f5d6;
+}
+
+.off {
+  border: 1px solid;
+  width: 250px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #ff9999;
+}
+
 #darmuus {
 font-family: 'Mr Bedfort', cursive;
 font-size: 100px;
@@ -29,7 +47,7 @@ margin: 1px;
 .centered {
   position: absolute;
   height: 100px;
-  width: 600px;
+  width: auto;
   margin: auto;
   top: 10%;
   left: 50%;
@@ -46,7 +64,7 @@ body {
 }
 
 #container {
-  top: 50%;
+  top: 25%;
 }
 
 .weather-widget {
