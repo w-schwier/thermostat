@@ -19,6 +19,37 @@ h3 {
     color: red;
 }
 
+.london {
+  background: url("london.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.havana {
+  background: url("havana.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.tokyo {
+  background: url("tokyo.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.rome {
+  background: url("rome.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.paris {
+  background: url("paris.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.sydney {
+  background: url("sydney.jpg") no-repeat top center fixed;
+  background-size: cover;
+}
+
+
 .on {
   border: 1px solid;
   width: 250px;
@@ -55,16 +86,8 @@ margin: 1px;
   text-align: center;
 }
 
-body {
-  /*background-image: url("warm-fire.jpg");*/
- /*-webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;*/
- /*background-size: cover;*/
-}
-
 #container {
-  top: 25%;
+  top: 30%;
 }
 
 .weather-widget {
@@ -77,6 +100,8 @@ body {
   border-left-width: 20px;
   border-top-width: 20px;
   border-left: 1px solid;
+  background-color: rgba(230, 230, 230, 0.5);
+
 }
 
 #temperature {

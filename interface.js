@@ -4,6 +4,7 @@ $(document).ready(function() {
   displayWeather('London')
 
 
+
   $('#temperature-increase').click(function() {
     thermostat.increase();
     updateTemperature();
@@ -45,10 +46,12 @@ $(document).ready(function() {
       $('#current-temperature').text(data.main.temp);
       $('#current-wind-speed').text(data.wind.speed);
     });
+
   };
 
   $('#current-city').change(function() {
     var city = $('#current-city').val();
     displayWeather(city);
+    $('body').attr('class', city);
   });
 });
