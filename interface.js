@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
+  displayWeather('London')
 
 
   $('#temperature-increase').click(function() {
@@ -34,4 +35,19 @@ $(document).ready(function() {
     $('#temperature').text(thermostat.temp);
     $('#temperature').attr('class', thermostat.currentEnergyUsage());
   };
+
+  function displayWeather(place) {
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + place;
+    var token = '&appid=5152d585e0729b41957adadef190a691';
+    var unit = '&units=metric';
+    $.get(url + token + unit, function(data) {
+      $('#current-temperature').text(data.main.temp);
+      $('#current-wind-speed').text(data.wind.speed);
+    });
+  };
+
+  $('#current-city').change(function() {
+    var city = $('#current-city').val();
+    displayWeather(city);
+  });
 });

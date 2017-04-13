@@ -20,11 +20,11 @@ margin: 1px;
 body {
   margin-left: 600px;
   margin-right: 600px;
-  background-image: url("warm-fire.jpg");
+  /*background-image: url("warm-fire.jpg");*/
  /*-webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;*/
- background-size: cover;
+ /*background-size: cover;*/
 }
 
 section.thermostat {
