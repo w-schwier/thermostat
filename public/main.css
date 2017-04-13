@@ -1,3 +1,12 @@
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
 .low-usage {
   color: green;
 }
@@ -17,9 +26,18 @@ padding: 1px;
 margin: 1px;
 }
 
+.centered {
+  position: absolute;
+  height: 100px;
+  width: 600px;
+  margin: auto;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 body {
-  margin-left: 600px;
-  margin-right: 600px;
   /*background-image: url("warm-fire.jpg");*/
  /*-webkit-background-size: cover;
  -moz-background-size: cover;
@@ -27,31 +45,22 @@ body {
  /*background-size: cover;*/
 }
 
-section.thermostat {
-  border: solid;
-  background:
+#container {
+  top: 50%;
 }
 
-h3 {
-  font-size: 30px;
-  font-family: 'Cinzel Decorative', cursive;
+.weather-widget {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+  padding: 20px 20px 20px 20px;
+  border-left-width: 20px;
+  border-top-width: 20px;
+  border-left: 1px solid;
 }
-
 
 #temperature {
-  padding: 1px;
-  margin: 1px;
   font-size: 70px
-}
-
-.panel {
-  float: left;
-  border: solid;
-
-
-}
-
-@font-face {
-  font-family: customFontBitches;
-  src: url(SCRIPALT.ttf)
 }

@@ -5,38 +5,40 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Cinzel+Decorative|Khmer|Mr+Bedfort" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='public/main.css'>
   </head>
+  <header>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <h1 id="darmuus" class="centered"> Darmuus </h1>
+  </header>
 
-  <center>
-    <body>
-      <section class='thermostat'>
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-          <p>
-            <h1 id="darmuus"> Darmuus </h1>
-            <div class="panel">
-            <h3><span id="temperature"></span>&deg;C</h3>
-            Power Saving Mode is <span id='power-saving-mode'>on</span>
-            </div>
-            <button id='temperature-increase'>+</button>
-            <button id='temperature-decrease'>-</button>
-            <button id='temperature-reset'>Reset</button>
-            <button id='powersaving-on'>PSM on</button>
-            <button id='powersaving-off'>PSM off</button>
+  <body>
+    <div id="container" class="centered">
+      <section class="psm">
+        <button id='powersaving-on'>PSM on</button>
+        <button id='powersaving-off'>PSM off</button>
+      </section>
 
-            <script src="src/thermostat.js"></script>
-            <script src="interface.js"></script>
-          </p>
+      <span id='power-saving-mode'>on</span>
+      <section class="thermo-temp">
+        <h3><span id="temperature"></span>&deg;C</h3>
+        <button id='temperature-increase'>+</button>
+        <button id='temperature-decrease'>-</button>
+        <button id='temperature-reset'>Reset</button>
       </section>
-      <section>
-        <h1>Current outside temperature: <span id='current-temperature'></span>&deg;C</h1>
-        <h4>Current wind speed: <span id='current-wind-speed'></span>mph</h4>
-        <select id='current-city'>
-          <option value='london'>London</option>
-          <option value='new-delhi'>New Dehli</option>
-          <option value='toronto'>Toronto</option>
-          <option value='cape-town'>Cape Town</option>
-          <option value='berlin'>Berlin</option>
-        </select>
-      </section>
-    </body>
+    </div>
+
+    <section class="weather-widget">
+      <h4>Current outside temperature: <span id='current-temperature'></span>&deg;C</h4>
+      <h4>Current wind speed: <span id='current-wind-speed'></span>mph</h4>
+      <select id='current-city'>
+        <option value='london'>London</option>
+        <option value='new-delhi'>New Dehli</option>
+        <option value='toronto'>Toronto</option>
+        <option value='cape-town'>Cape Town</option>
+        <option value='berlin'>Berlin</option>
+      </select>
+    </section>
+    <script src="src/thermostat.js"></script>
+    <script src="interface.js"></script>
+  </body>
   </center>
 </html>
